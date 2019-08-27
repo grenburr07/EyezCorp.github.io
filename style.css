@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Julius Sans One', sans-serif;
+    background: #151719;
+}
+
+.middle {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 14px;
+}
+
+.text::before,.text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.text::before {
+    color: #3498db;
+    animation: glitch-effect 2s infinite;
+}
+
+@keyframes glitch-effect {
+    0% {
+        left: -2px;
+        top: -2px;
+    }
+
+    25% {
+        left: 2px;
+        top: 0px;
+    }
+
+    50% {
+        left: -1px;
+        top: 2px;
+    }
+
+    75% {
+        left: 1px;
+        top: -1px;
+    }
+
+    100% {
+        left: 0px;
+        top: -2px;
+    }
+}
+
+.neon {
+    position: absolute;
+    font-family: 'Amatic SC', cursive;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0px;
+    padding: 0 20px;
+    font-size: 35px;
+    color: #fff;
+    text-shadow: 0 0 20px #3498db;
+}
+
+.descr {
+    position: absolute;
+    top: 29%;
+    left: 31%;
+    font-size: 35px;
+    font-family: 'Amatic SC', cursive;
+    color: #fff;
+}
+
+.eye {
+    width: 200px;
+    height: 200px;
+    background: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 75% 0;
+    overflow: hidden;
+}
+
+.ball {
+    width: 40px;
+    height: 40px;
+    background: #222f3e;
+    border-radius: 50%;
+    border: 30px solid #576574;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shut {
+    width: 300px;
+    height: 160px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%) rotate(-45deg);
+    z-index: 999;
+}
+
+.shut span{
+    display: block;
+    width: 100%;
+    height: 15%;
+    background: #161a1e;
+    border-radius: 0 0 60% 60%;
+    transition: 0.4s all;
+}
+
+.eye:hover > .shut span{
+    height: 100%;
+}
+
+.descr2 {
+    position: absolute;
+    color: white;
+    top: 75%;
+    left: 13%;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+
+.descr3 {
+    position: absolute;
+    color: white;
+    top: 83%;
+    left: 35%;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+
+.descr4 {
+    position: absolute;
+    color: #fff;
+    top: 90%;
+    left: 43%;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    text-shadow: 0 0 20px #3498db;
+}
